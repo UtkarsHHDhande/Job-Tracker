@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // You can define your backend URL in a .env file
-const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "https://job-tracker-mfyl.onrender.com";
 
 // Get all job applications
 export const getAllJobs = async () => {
