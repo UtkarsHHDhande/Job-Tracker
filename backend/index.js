@@ -8,7 +8,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// 🔥 Configure CORS for Vercel frontend
+app.use(cors({
+  origin: "https://job-tracker-weld-eta.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 connectDB();
